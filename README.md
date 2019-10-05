@@ -10,6 +10,32 @@
 - belongs_to :user
 
 
+## usersテーブル
+
+|Colum|Type|Options|
+|-----|----|-------|
+|user_id|integer|null: false,foreigh_key: true|
+|t.references :user_name, foreign_key: true|
+|t.references :user_email, foreign_key: true|
+|user_password|integer|null: false,foreign_key: true|
+
+
+### Association
+
+- has_many :comments
+
+
+## commentsテーブル
+
+|Colom|Type|Options|
+|-----|----|-------|
+|user_id|integer|null: false, foreigh_key:true|
+|comment_id|integer|null: false,foreigh_key: true|
+
+### Asociation
+
+- belongs_to :user
+
 
 
 
