@@ -32,10 +32,13 @@
 |-----|----|-------|
 |user_id|integer|null: false, foreigh_key:true|
 |comment_id|integer|null: false,foreigh_key: true|
+|text||
+|image|text|
 
 ### Association
 
 - belongs_to :user
+- belongs_to :group
 
 ## groupsテーブル
 
