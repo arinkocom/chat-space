@@ -15,13 +15,14 @@
 |Colum|Type|Options|
 |-----|----|-------|
 |user_id|integer|null: false,foreigh_key: true|
-|t.references :user_name, foreign_key: true|
-|t.references :user_email, foreign_key: true|
-|user_password|integer|null: false,foreign_key: true|
+|name|string|null: false,foreigh_key: true|
+|email|string|null: false,foreigh_key: true|
+|password|string|null: false,foreign_key: true|
 
 
 ### Association
-
+- has many :groups_users
+- has many :groups, through: :groups_users
 - has_many :comments
 
 
@@ -32,9 +33,24 @@
 |user_id|integer|null: false, foreigh_key:true|
 |comment_id|integer|null: false,foreigh_key: true|
 
-### Asociation
+### Association
 
 - belongs_to :user
+
+## groupsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false, foreign_key: true|
+
+
+### Association
+- has many :groups_users
+- has many :users, through: :groups_users
+- has many comments
+
+
+## 
 
 
 
