@@ -14,7 +14,6 @@
 
 |Colum|Type|Options|
 |-----|----|-------|
-|user|integer|null: false,foreigh_key: true|
 |name|string|null: false,index: true|
 |email|string|null: false,foreigh_key: true|
 |password|string|null: false,foreign_key: true|
