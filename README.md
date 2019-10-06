@@ -32,8 +32,8 @@
 |-----|----|-------|
 |user_id|integer|null: false, foreigh_key:true|
 |comment_id|integer|null: false,foreigh_key: true|
-|text||
 |image|text|
+|
 
 ### Association
 
