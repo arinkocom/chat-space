@@ -2,8 +2,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|t.reference :user|null: false, foreign_key: true|
+|t.reference :group_id|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
@@ -14,8 +14,8 @@
 
 |Colum|Type|Options|
 |-----|----|-------|
-|user_id|integer|null: false,foreigh_key: true|
-|name|string|null: false,foreigh_key: true|
+|user|integer|null: false,foreigh_key: true|
+|name|string|null: false,index: true|
 |email|string|null: false,foreigh_key: true|
 |password|string|null: false,foreign_key: true|
 
@@ -30,10 +30,10 @@
 
 |Colom|Type|Options|
 |-----|----|-------|
-|user_id|integer|null: false, foreigh_key:true|
-|comment_id|integer|null: false,foreigh_key: true|
+|t.reference :user|null: false, foreigh_key:true|
+|t.reference :group_id|null: false,foreigh_key: true|
 |image|text|
-|
+|text|text|
 
 ### Association
 
@@ -50,7 +50,7 @@
 ### Association
 - has many :groups_users
 - has many :users, through: :groups_users
-- has many comments
+- has many :comments
 
 
 ## 
