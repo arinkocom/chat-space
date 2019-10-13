@@ -14,20 +14,12 @@
               = fa_icon 'cog'
     .groups
       .group
-        .group__title
-          ggg
-        .group__message
-          こんにちは
-      .group
-        .group__title
-          www
-        .group__message
-          よろしく
-      .group
-        .group__title
-          ooo
-        .group__message
-          さようなら
+        - current_user.groups.each do |group|
+        = link_to '#' do
+          .group__name
+            = group.name
+          .group__message
+            メッセージはまだありません。
         
   .chat-main
     .main-header

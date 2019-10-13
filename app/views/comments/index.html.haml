@@ -4,30 +4,30 @@
   .chat-side
     .chat-side__header
       .chat-side__header__box
-        = current_user.name
+        %p arinkocom
         .chat-side__header__box__menu
           %li.list
-            = link_to new_group_path do
-              = fa_icon 'pencil-square-o', class: 'icon'
+            =link_to do
+              = fa_icon 'edit'
           %li.list
-            = link_to edit_user_path(current_user) do
-              = fa_icon 'cog', class: 'icon'
+            =link_to do
+              = fa_icon 'cog'
     .groups
       .group
         .group__title
-          グループ名
+          ggg
         .group__message
-          新着メッセージ
+          こんにちは
       .group
         .group__title
-          グループ名
+          www
         .group__message
-          新着メッセージ
+          よろしく
       .group
         .group__title
-          グループ名
+          ooo
         .group__message
-          新着メッセージ
+          さようなら
         
   .chat-main
     .main-header
@@ -42,19 +42,19 @@
       .message
         .message-box
           .message-box__name
-            メンバー
+            arinkocom
           .message-box__time
             2019.10.08
         .massage__taxt
-          メッセージ
+          おはよ
       .message
         .message-box
           .message-box__name
-            メンバー
+            arinkocom
           .message-box__time
             2019.10.08
         .massage__taxt
-          メッセージ  
+          おはよ     
     .form
       .input-box
         .input-box__btn
@@ -68,4 +68,3 @@
 
 
           
-
