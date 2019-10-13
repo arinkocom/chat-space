@@ -1,0 +1,67 @@
+.flah-box
+  %p グループを作りました。
+.wrapper
+  .chat-side
+    .chat-side__header
+      .chat-side__header__box
+        %p arinkocom
+        .chat-side__header__box__menu
+          %li.list
+            =link_to do
+              = fa_icon 'edit'
+          %li.list
+            =link_to do
+              = fa_icon 'cog'
+    .groups
+      .group
+        .group__title
+          ggg
+        .group__message
+          こんにちは
+      .group
+        .group__title
+          www
+        .group__message
+          よろしく
+      .group
+        .group__title
+          ooo
+        .group__message
+          さようなら
+        
+  .chat-main
+    .main-header
+      .main-header__btn
+        Edit
+      .main-header__curre
+        gggg
+      .main-header__member
+        Member 
+
+    .messages
+      .message
+        .message-box
+          .message-box__name
+            arinkocom
+          .message-box__time
+            2019.10.08
+        .massage__taxt
+          おはよ
+      .message
+        .message-box
+          .message-box__name
+            arinkocom
+          .message-box__time
+            2019.10.08
+        .massage__taxt
+          おはよ     
+    .form
+      .input-box
+        .input-box__btn
+          send
+        .input-box__field
+          type a message
+          %li.list
+            %label.upload-label{for: "upload-icon"}
+              %i.fa.fa-picture-o
+              %input.hidden{type: 'file', id:'upload-icon'}
