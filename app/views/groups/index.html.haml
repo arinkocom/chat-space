@@ -1,13 +1,12 @@
-.flah-box
-  %p グループを作りました。
 .wrapper
+  -# = render 'shared/side_bar'
   .chat-side
     .chat-side__header
       .chat-side__header__box
         %p arinkocom
         .chat-side__header__box__menu
           %li.list
-            =link_to do
+            = link_to new_group_path do
               = fa_icon 'edit'
           %li.list
             =link_to do
