@@ -1,35 +1,19 @@
-.chat-main
-    .main-header
-      .main-header__btn
-        Edit
-      .main-header__curre
+.wrapper
+  = render "shared/side_bar"
+  .chat-main
+    .chat-main-header
+      = link_to "Edit", edit_group_path(@group), class: 'chat-main-header__btn' 
+      .chat-main-header__name
         gggg
-      .main-header__member
+      .chat-main-header__member
         Member 
     .messages
-      .message
-        .message-box
-          .message-box__name
-            arinkocom
-          .message-box__time
-            2019.10.08
-        .massage__taxt
-          おはよ
-      .message
-        .message-box
-          .message-box__name
-            arinkocom
-          .message-box__time
-            2019.10.08
-        .massage__taxt
-          おはよ     
+      = render @messages
     .form
-      .input-box
-        .input-box__btn
-          send
-        .input-box__field
-          type a message
-          %li.list
-            %label.upload-label{for: "upload-icon"}
-              %i.fa.fa-picture-o
-              %input.hidden{type: 'file', id:'upload-icon'}
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
