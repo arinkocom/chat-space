@@ -117,26 +117,26 @@
     height: calc(100% - 190px);
     width: 100%;
     padding: 0 40px 0 40px;
-      .message{
-        padding: 40px 0 10px 0;
-        .upper-message{
+    .message{
+      padding: 40px 0 10px 0;
+      .upper-message{
 
-        }
-          .upper-message__user-name{
+      }
+        .upper-message__user-name{
             color: #434A54;
             font-size: 20px;
             float: left;
-          }
-          .upper-message__date{
+        }
+        .upper-message__date{
             color: #999999;
             font-size: 12px;
             padding-top: 10px;
             padding-left: 110px;
-          }
-        .lower-message__content{
-          
         }
+      .lower-message__content{
+          
       }
+    }
       
   }
   }
