@@ -21,7 +21,7 @@ $(function(){
       return html;
     } else {
       var html =
-        `<div class="message" data-message-id=${message.id}>
+      `<div class="message" data-message-id=${message.id}>
           <div class="upper-message">
             <div class="upper-message__user-name">
               ${message.user_name}
@@ -44,7 +44,8 @@ $(function(){
   $("#new_message").on('submit',function(e){
     e.preventDefault();
     var formdata = new FormData(this);
-    var url = $(this).attr('action')
+    // console.log(formdata);
+    var url = $(this).attr('action');
     $.ajax({
       url: url,
       type: "POST",
@@ -54,6 +55,7 @@ $(function(){
       contentType: false
     })
     .done(function(data){
+      console.log(data)
       var html = buildHTML(data);
       $('.messages').append(html);
       $('.form__message').val('');
