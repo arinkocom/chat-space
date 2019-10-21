@@ -1,4 +1,5 @@
-.message
+.message{"data-message-id": "#{message.id}"}
+  -# %div{data-message-id: "#{message.id}"}
   .upper-message
     .upper-message__user-name
       = message.user.name
@@ -9,3 +10,16 @@
       %p.lower-message__content
         = message.content
     = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
+
+
+
+
+
+    -# # %section#blog{"data-author" => "Taro", "data-create-date" => "2013-04-10"}
+    -#   %h1 Hello World!
+    -#   %p This is a sample text.
+    -#   :javascript
+    -#   var blog = $("#blog");/
+        
+    -#   alert("author : " + blog.data('author'));
+    -#   alert("create date : " + blog.data('create-date'));
