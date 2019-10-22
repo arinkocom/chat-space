@@ -10,7 +10,6 @@ $(function(){
               ` 
       return html;
   } 
-  
   function appendNoUserHTML(){
     var html = `
               <div class="chat-group-user clearfix">
@@ -19,7 +18,6 @@ $(function(){
     $(search_list).append(html);
     return html;
   }
-  
   $("#user-search-field").on('keyup', function(e){
     e.preventDefault();
     var input = $(this).val();    
@@ -46,16 +44,8 @@ $(function(){
 
     .fail(function() {
       alert("ユーザー検索に失敗しました");
-    })  
-    
-
+    })    
   });
-
- 
- 
- 
- 
- 
   function buildHTML(user){
       var html = `
       <div class='chat-group-user'>
@@ -66,12 +56,6 @@ $(function(){
       `
       return html;
     }
-     
-    
-
-  
-
-  
     $(document).on('click', '.user-search-add', function() {
             var user = $(this).data();
             var html = buildHTML(user);
