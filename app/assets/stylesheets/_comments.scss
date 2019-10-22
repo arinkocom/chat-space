@@ -19,13 +19,14 @@
     margin: 0;
     padding-top: 0px;
     float: left;
-    overflow:scroll;
+    // overflow:scroll;
     .header{
       background-color: #253141;
       height: 100px;
       padding: 0 20px;
       line-height: 100px;
       color: #FFFFFF;
+      overflow: hidden;
       &__name{
         display: inline-block;
         font-size: 16px;
@@ -48,21 +49,26 @@
   background-color:#2F3E51;
   height: calc(100% - 100px);
   padding: 0 20px;
+  overflow: auto;
+  text-decoration: none;
   
     .group {
     padding: 20px 0 40px 0;
     
+    a{text-decoration: none ;
+      color: white;
       &__name {
       font-size: 16px;
       font-weight: bold;
       color: #fff;
+      
       }
       &__message {
       font-size: 11px;
       font-weight: bold;
       color: #fff;
       margin: 5px;
-      }
+      }}
     }
   }
 
@@ -149,7 +155,8 @@
     background-color: #DDDDDD;
     height:70px ;
     width: calc(100vw - 300px);
-    padding: 20px 40px;
+    padding: 20px 40px 20px 40px;
+    margin-right: 40px;
     display: inline-block;
     display: table;
     box-sizing: border-box;
@@ -158,16 +165,18 @@
       color: #434A54;
       font-size: 16px;
       height: 50px;
-      width: 1300px;
-      position: relative;
+      width: calc(100vw - 520px);
+      // position: relative;
       float: left;
-      width: calc(100%-150px);
+      
+      
 
     }
     &__mask {
       height: 50px;
       position: relative;
       float: left;
+      font-size: 1.3rem;
       &__image {
         position: absolute;
         right: 20px;
@@ -191,6 +200,9 @@
     background-color: #38AEF0;
     display: inline-block;
     color: #FFFFFF;
+    position: relative;
+    
+    // left: 30px;
     }
   }  
 } 

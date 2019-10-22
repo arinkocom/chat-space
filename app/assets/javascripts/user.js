@@ -18,7 +18,7 @@ $(function(){
     $(search_list).append(html);
     return html;
   }
-  $("#user-search-field").on('keyup', function(e){
+  $(document).on('keyup','#user-search-field' ,function(e){
     e.preventDefault();
     var input = $(this).val();    
   $.ajax({
