@@ -5,8 +5,10 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :edit, :update,:input]
   resources :groups, only: [:index,:new, :create, :edit, :update] do
     resources :messages, only: [:index, :create]
-    collection do
-      get 'search'
+
+    namespace :api do
+      resources :messages, only: :index, defaults: { format: 'json' }
+
     end
   end
 end
