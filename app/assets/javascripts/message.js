@@ -74,11 +74,10 @@ $(function(){
     })
     .fail(function() {
       alert('自動更新に失敗しました。')
-      // console.log("NG");
+      
     });
   };
   
   setInterval(reloadMessages, 5000);}
 });
-
 

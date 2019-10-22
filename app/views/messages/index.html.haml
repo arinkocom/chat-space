@@ -11,6 +11,7 @@
           = user.name
     .messages
       = render @messages
+    
     .form
       = form_for [@group, @message],id: "new__message" do |f|
         = f.text_field :content, class: 'form__message', placeholder: '  type a message'
