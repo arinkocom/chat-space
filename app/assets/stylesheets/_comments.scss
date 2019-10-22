@@ -48,8 +48,10 @@
   background-color:#2F3E51;
   height: calc(100% - 100px);
   padding: 0 20px;
+  
     .group {
     padding: 20px 0 40px 0;
+    
       &__name {
       font-size: 16px;
       font-weight: bold;
@@ -122,9 +124,9 @@
     overflow:scroll;
     .message{
       padding: 40px 0 10px 0;
-      .upper-message{
+      // .upper-message{
 
-      }
+      // }
         .upper-message__user-name{
             color: #434A54;
             font-size: 20px;
@@ -136,9 +138,9 @@
             padding-top: 10px;
             padding-left: 110px;
         }
-      .lower-message__content{
+      // .lower-message__content{
           
-      }
+      // }
     }
       
   }
