@@ -2,7 +2,7 @@ $(function(){
   function buildHTML(message){
 
       var img = message.image ? `<img src= ${message.image}>`: "";
-      var content = message.content ? `${message.content}` : "";
+      // var content = message.content ? `${message.content}` : "";
 
       var html =
         `<div class="message" data-message-id=${message.id}>
@@ -16,7 +16,7 @@ $(function(){
           </div>
           <div class="lower-message">
             <p class="lower-message__content">
-              ${content}
+              ${message.content}
             </p>
           </div>
           ${img}
@@ -80,4 +80,6 @@ $(function(){
   
   setInterval(reloadMessages, 5000);}
 });
+
+
 
