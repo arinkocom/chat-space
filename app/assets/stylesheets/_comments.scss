@@ -129,24 +129,34 @@
     padding: 0 40px 0 40px;
     overflow:scroll;
     .message{
-      padding: 40px 0 10px 0;
-      // .upper-message{
-
-      // }
-        .upper-message__user-name{
-            color: #434A54;
-            font-size: 20px;
-            float: left;
+      padding: 40px 0 40px 0;
+        .upper-message{
+          padding-bottom: 10px;
+          .upper-message__user-name{
+              color: #434A54;
+              //font-size: 20px;
+              float: left;
+              //color: #434a54;
+              font-size: 20px;
+              font-weight: bold;
+          }
+          .upper-message__date{
+              color: #999999;
+              font-size: 12px;
+              padding-top: 10px;
+              //padding-left: 110px;
+              margin-left: 20px; 
+          }
         }
-        .upper-message__date{
-            color: #999999;
-            font-size: 12px;
-            padding-top: 10px;
-            padding-left: 110px;
+        .lower-message{
+          width: 100%;
+          float: left;
+          .lower-message__image{
+            width: 100%;
+          }
         }
-      // .lower-message__content{
+        
           
-      // }
     }
       
   }
