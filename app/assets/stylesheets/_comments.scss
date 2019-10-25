@@ -121,46 +121,41 @@
     }
 
   .messages{
-    
     background-color: #fafafa;
     color: #434A54;
     height: calc(100% - 190px);
-    width: 100%;
-    padding: 0 40px 0 40px;
+    // width: 100%;
+    box-sizing: border-box;
+    padding: 40px 40px 0 40px;
     overflow:scroll;
     .message{
-      padding: 40px 0 40px 0;
+      padding-bottom: 40px;
+      
         .upper-message{
           padding-bottom: 10px;
-          .upper-message__user-name{
+          display: flex;
+          &__user-name{
               color: #434A54;
-              //font-size: 20px;
-              float: left;
-              //color: #434a54;
               font-size: 20px;
               font-weight: bold;
           }
-          .upper-message__date{
+          &__date{
               color: #999999;
               font-size: 12px;
               padding-top: 5px;
               padding-bottom: 10px;
-              //padding-left: 110px;
-              margin-left: 10px; 
-              float: left;
+             margin-left: 10px; 
           }
         }
+      
         .lower-message{
           width: 100%;
-          float: left;
           .lower-message__image{
-            width: 100%;
+            width: 30%;
+            display: block;
           }
         }
-        
-          
-    }
-      
+      }
   }
   }
   .form{

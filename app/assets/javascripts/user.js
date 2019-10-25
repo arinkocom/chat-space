@@ -1,4 +1,5 @@
-$(function(){
+$(document).on('turbolinks:load', function(){
+
   var search_list = $("#user-search-result");
   
   function appendUsers(user) {
@@ -38,8 +39,10 @@ $(function(){
         $("#user-search-result").append(html);
       });
     } else {
+      console.log(1);
       appendNoUserHTML();
     }
+    
     if(input.length === 0){
       $("#user-search-result").empty();
     }
@@ -76,3 +79,5 @@ $(function(){
               $(this).parent().remove(); 
      })
 })
+
+

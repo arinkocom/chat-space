@@ -51,10 +51,11 @@ $(function(){
 
  
   var reloadMessages = function() {
+    
   path = location.pathname
   var group_id = $ (".chat-main-header__name").attr("id")
     if(path == "/groups/" + group_id+"/messages"){
-
+      console.log("ok2")
     var last_message_id = $(".message").last().attr("id");
     
     $.ajax({
@@ -65,6 +66,7 @@ $(function(){
     })
 
     .done(function(messages) {
+      
       var insertHTML = '';
       messages.forEach(function(message) {
         insertHTML = buildHTML(message);
@@ -76,9 +78,11 @@ $(function(){
       alert('自動更新に失敗しました。')
       
     });
+    setInterval(reloadMessages, 5000);
   };
   
-  setInterval(reloadMessages, 5000);}
+  }
+  
 });
 
 
