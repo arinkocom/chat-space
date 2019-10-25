@@ -52,11 +52,11 @@ $(function(){
  
   var reloadMessages = function() {
     
-  path = location.pathname
-  var group_id = $ (".chat-main-header__name").attr("id")
-    if(path == "/groups/" + group_id+"/messages"){
-      console.log("ok2")
-    var last_message_id = $(".message").last().attr("id");
+  // path = location.pathname
+  // var group_id = $ (".chat-main-header__name").attr("id")
+    if(window.location.href.match(/\/groups\/\d+\/messages/)){
+      
+    var last_message_id = $(".message:last").data('message-id');
     
     $.ajax({
       url: "api/messages",
@@ -66,7 +66,7 @@ $(function(){
     })
 
     .done(function(messages) {
-      
+      console.log("ok2")
       var insertHTML = '';
       messages.forEach(function(message) {
         insertHTML = buildHTML(message);
@@ -78,11 +78,11 @@ $(function(){
       alert('自動更新に失敗しました。')
       
     });
-    setInterval(reloadMessages, 5000);
+    
   };
   
-  }
-  
+  };
+  setInterval(reloadMessages, 5000);
 });
 
 
